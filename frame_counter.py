@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 CAMERAS = ["1.03", "1.04", "1.05", "2.05"]
-SAVE_PATH = "C:/Users/diogo/Desktop/Tese/Resultados/frame_counter"
+SAVE_PATH = "results/frame_counter"
 
 
 def get_video_numbers_sorted(path):
@@ -20,8 +20,8 @@ def count_frames_tocsv(camera):
     video_numbers = get_video_numbers_sorted(videos_dir_path)
     name_and_length = []
     for n1, n2 in video_numbers:
-        video_name = f"20220314_{camera}_{n1}_{n2}_blurred.mp4"
-        video = cv2.VideoCapture(f"{videos_dir_path}/{video_name}")
+        video_name = f"20220314_{camera}_{n1}_{n2}_blurred"
+        video = cv2.VideoCapture(f"{videos_dir_path}/{video_name}.mp4")
         length = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
         name_and_length.append([video_name, length])
     pd.DataFrame(name_and_length).to_csv(f"{SAVE_PATH}/frame_count_{camera}.csv", header=["video_name", "length"])
