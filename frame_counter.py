@@ -24,7 +24,7 @@ def count_frames_tocsv(camera):
         video = cv2.VideoCapture(f"{videos_dir_path}/{video_name}.mp4")
         length = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
         name_and_length.append([video_name, length])
-    pd.DataFrame(name_and_length).to_csv(f"{SAVE_PATH}/frame_count_{camera}.csv", header=["video_name", "length"])
+    pd.DataFrame(name_and_length).to_csv(f"{SAVE_PATH}/frame_count_{camera}.csv", header=["video_name", "length"], index=False)
 
 
 for camera in CAMERAS:
