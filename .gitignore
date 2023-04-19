@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Results Folder
+data_examples
+results/trajectories/transformed_coords.csv
