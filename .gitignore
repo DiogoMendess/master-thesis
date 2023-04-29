@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 # Results Folder
-data_examples
+data_examples_second_exp
+data_examples_first_exp
 results/trajectories/transformed_coords.csv
