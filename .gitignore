@@ -131,4 +131,5 @@ dmypy.json
 # Results Folder
 data_examples_second_exp
 data_examples_first_exp
+data_examples_third_exp
 results/trajectories/transformed_coords.csv
